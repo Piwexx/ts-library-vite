@@ -11,13 +11,6 @@ export default defineConfig({
       name: 'ts-lib-vite',
     },
   },
-  resolve: {
-    alias: {
-      '@src': path.resolve(__dirname, 'src'),
-      '@types': path.resolve(__dirname, 'src/types'),
-      // '@utils': resolve(__dirname, '/src/utils')
-    },
-  },
   plugins: [
     dts({ outDir: 'dist', exclude: ['**/*.(test|spec).tsx?', 'test/'] }),
     viteConfigPaths(),
